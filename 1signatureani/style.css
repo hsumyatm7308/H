@@ -1,0 +1,172 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container-dialog{
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 500px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aitchlogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.left-stick{
+    width: 40px;
+    height: 75px;
+    border: 1px solid #fff;
+    border-bottom:none ;
+    border-radius: 15px 5px 0 0;
+
+    position: relative;
+
+}
+
+.left-stick::after{
+    content: " ";
+    width: 21%;
+    height: 40px;
+    background-color: #000;
+
+    border-top:3px solid #fff;
+
+    position: absolute;
+    right: -1px;
+    top: 23.5px;
+}
+
+
+.left-stick::before{
+    content: '';
+    width: 110%;
+    height: 110%;
+    background-color: #000;
+
+    position: absolute;
+    left: -1px;
+    top: -1px;
+
+    animation: writingani 2s;
+    animation-fill-mode: forwards;
+
+}
+
+
+
+.peace-bridge{
+    width: 35px;
+    height: 24px;
+    border-top:3px solid #fff;
+    border-bottom: 1px solid #fff;
+
+    position: relative;
+    
+}
+
+.peace-bridge::after{
+    content: '';
+    width: 140%;
+    height: 130%;
+    background: #000;
+
+    position: absolute;
+    left: -10px;
+    top: -4px;
+
+    animation: bridgeani 2s ;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+@keyframes bridgeani {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(900%);
+    }
+}
+
+
+.right-stick{
+    width: 40px;
+    height: 75px;
+    border: 1px solid #fff;
+    border-bottom:none ;
+    border-radius: 15px 5px 0 0;
+
+    position: relative;
+}
+
+.right-stick::after{
+    content: " ";
+    width: 21%;
+    height: 49px;
+    background-color: #000;
+
+    position: absolute;
+    left: -1px;
+    top: 26px;
+}
+
+
+.right-stick::before{
+    content: '';
+    width: 110%;
+    height: 110%;
+    background-color: #000;
+
+    position: absolute;
+    left: -1px;
+    top: -1px;
+
+    animation: writingani 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+
+}
+
+
+@keyframes writingani {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translateY(-100%);
+    }
+}
+
+
+.text{
+    color: #000;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: 'Climate Crisis', cursive;
+    -webkit-text-stroke:1px #fff ;
+    /* position: absolute;
+    bottom: 0;
+    z-index: 3; */
+}
+
